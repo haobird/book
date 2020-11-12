@@ -10,6 +10,7 @@
 - **基础技能**
 * [VScode](vscode)
 * [Draw.io](draw)
+* [Git技巧](tips-git)
 - **服务器配置**
 * [mac环境配置](mac.md)
 * [服务器登录配置](server-init)
