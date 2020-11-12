@@ -39,8 +39,39 @@ git push origin mix1.0
 
 ```
 
-## 提取文件操作
+## 文件操作
 
+```
+# 清除所有已经跟踪的变更
+git checkout .
+# 清除所有未跟踪的变更
+git clean -f -d
+# 清除本地所有修改并删除所有的改动和新增文件
+git checkout . && git clean -xdf
+# 自动把所有已经跟踪过的文件暂存起来一并提交
+git commit -a -m 'test'
+```
+
+## 标签操作
+
+```
+① git commit -m "注释"
+② git tag <tag name>    或者  git tag -a <tag name> -m <message>   （eg: git tag -a v1.1.0 -m 'v1.1.0 release'）
+③ git push    提交commit
+④ git push origin <tag name>  // 推送一个标签到远程 或者 git push origin --tags   // 推送全部未推送的本地标签
+⑤ git tag -d <tag name>  本地删除标签
+⑥ git push origin :refs/tags/<tag name>   // 本地tag删除了，在执行该句，删除远程tag
+```
+
+
+## log 相关
+
+```
+# 打印一个可视化的 log
+git log --pretty=oneline --graph --decorate --all
+# 查询包含某个关键字的 commits
+git log -S"config.menu_items"
+```
 
 
 ## git常见问题
@@ -51,6 +82,8 @@ git push origin mix1.0
 
 ```
 git pull origin master --allow-unrelated-histories 
+或者
+git pull --allow-unrelated-histories
 ```
 
 #### 第一次添加远程库，拉取分支出现错误提示
@@ -79,6 +112,16 @@ git branch --set-upstream master origin/master
 首先git checkout -b temp
 其次git checkout master
 ```
+
+#### git add . 遇到 warning: LF will be replaced by CRLF…
+
+*参考连接：https://blog.kelu.org/tech/2015/11/11/git-problem-with-warning-crlf-will-be-replaced.html *
+
+```
+git config --global core.autocrlf  false
+```
+
+
 
 
 
