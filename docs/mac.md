@@ -1,5 +1,14 @@
 # mac 环境配置
 
+## 开发软件推荐
+
+* OpenInTerminal 在当前目录打开终端[链接](https://github.com/Ji4n1ng/OpenInTerminal)
+* Apifox  接口文档、调试、Mock [链接](https://www.apifox.cn/)
+* iTerm2 终端工具 [链接](iterm2.com/)
+* Medis/Red redis 客户端
+* Navicat_Premium mysql客户端
+
+
 ## office 安装
 
 1. 下载原版office[链接](https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.30.19101301_Installer.pkg)
